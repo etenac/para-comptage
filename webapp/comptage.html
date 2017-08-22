@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Comptage</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="comptage.css" rel="stylesheet" />
+</head>
+
+<body>
+
+        
+    <h1>Nombre d'appels & durée</h1>
+        <div>
+            <div id="timer" class="button" onclick="comptage.toggle()">00h 00m 00s</div>
+            <div id="reason" contenteditable></div>
+            <div id="btnDiscard" class="button" onclick="comptage.discard()">Ne pas comptabiliser l'appel</div>
+        </div>
+
+        <div>
+            <table id="stats">
+                <tr>
+                    <td>Nombre d'appels : </td>
+                    <td id="nbCall" class="value">0</td>
+                </tr><tr>
+                    <td>Temps de communication total : </td>
+                    <td id="totalTimeInSec" class="value">00h 00m 00s</td>
+                </tr><tr>
+                    <td>Temps de comm moyen : </td>
+                    <td id="averageTimeInSec" class="value">00h 00m 00s</td>
+                </tr><tr>      
+                    <td>Temps de comm mini : </td>
+                    <td id="minTimeInSec" class="value">00h 00m 00s</td>
+                </tr><tr>
+                    <td>Temps de comm maxi : </td>
+                    <td id="maxTimeInSec" class="value">00h 00m 00s</td>
+                </tr>
+            </table>
+            
+            <div id="btnSend" class="button" onClick="comptage.send()">Transmettre les stats</div>
+        </div>
+    
+    <script type="text/javascript" src="comptage.js"></script>
+</body>
+</html>
